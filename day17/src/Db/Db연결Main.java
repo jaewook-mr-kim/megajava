@@ -1,0 +1,24 @@
+package Db;
+
+import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.swing.JOptionPane;
+
+public class Dbø¨∞·Main {
+
+	public static void main(String[] args) throws Exception {
+		
+		String id = JOptionPane.showInputDialog("id");
+		String pw = JOptionPane.showInputDialog("pw");
+		String name = JOptionPane.showInputDialog("name");
+		String tel = JOptionPane.showInputDialog("tel");
+		DAO dao = new DAO();
+		dao.insert(id, pw, name, tel);
+		
+	}
+
+}
